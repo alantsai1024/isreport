@@ -11,9 +11,7 @@ const app = express()
 const session = require('express-session')
 const ip = '192.168.0.23'
 const port = 5555
-const RedisStore = require('connect-redis').default;
-const redis = require('redis');
-const redisClient = redis.createClient();
+
 
 
 
@@ -23,7 +21,7 @@ dotenv.config({ path: './config.env' })
 
 //設定session
 app.use(session({
-    store: new RedisStore({ client: redisClient }),
+  
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,

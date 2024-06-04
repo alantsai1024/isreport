@@ -11,7 +11,7 @@ const app = express()
 const session = require('express-session')
 const ip = '192.168.0.23'
 const port = 5555
-const RedisStore = require('connect-redis')(session);
+const RedisStore = require('connect-redis').default;
 const redis = require('redis');
 const redisClient = redis.createClient();
 

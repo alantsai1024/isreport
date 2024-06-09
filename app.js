@@ -79,6 +79,4 @@ app.use((req, res, next) => {
 app.use('/', require('./routes/router'))
 app.use('/auth', require('./routes/auth'))
 
-app.listen(5555, () => {
-    console.log(`服務運行在：http://localhost:5555}`);
-})
+module.exports = app;

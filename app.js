@@ -80,3 +80,7 @@ app.use('/', require('./routes/router'))
 app.use('/auth', require('./routes/auth'))
 
 module.exports = app;
+
+app.listen(3000, () => {
+        console.log("Server is running on port 3000");
+    });
